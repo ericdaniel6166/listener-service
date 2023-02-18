@@ -131,7 +131,7 @@ func logEvent(entry Payload) error {
 	}
 	defer response.Body.Close()
 
-	if response.StatusCode != http.StatusAccepted {
+	if response.StatusCode != http.StatusOK {
 		return err
 	}
 
